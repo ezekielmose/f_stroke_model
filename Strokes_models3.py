@@ -60,7 +60,13 @@ def main():
     ever_married = int(st.text_input("Ever married 0 for No and 1 for Yes", "0"))
     work_type = int(st.selectbox( label = "Work type 0-private. 1-self-employed, 2-children, 3-gov_job, and 4-never worked", options = [0, 1,2,3,4]))
     Residence_type = int(st.text_input("Residence type 0 for urban and 1 for rural", "0"))
-    avg_glucose_level = float(st.text_input("Enter any value of avg_glucose_level as per the measurements", "0"))
+
+    avg_glucose_level = st.number_input( "Select the avg_glucose_level using the + and - signs )", 
+        min_value=100, 
+        max_value=300, 
+        step=1
+    
+    #avg_glucose_level = float(st.text_input("Enter any value of avg_glucose_level as per the measurements", "0"))
     bmi = float(st.text_input("Enter any value of BMI as per the measurements", "0"))
 
     smoking_status = st.number_input( "Smoking status (0: Never smoked, 1: Unknown, 2: Formerly smoked, 3: Smokes)", 
