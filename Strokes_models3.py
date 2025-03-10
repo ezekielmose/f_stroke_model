@@ -72,7 +72,7 @@ def main():
     bmi = st.number_input( "Select the BMI value", 
         min_value=10, 
         max_value=97, 
-        step=0.2
+        step=1
     )
     #bmi = float(st.text_input("Enter any value of BMI as per the measurements", "0"))
 
