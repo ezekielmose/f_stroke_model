@@ -47,8 +47,8 @@ def main():
     
             /* Change the hover effect on dropdown options */
             li:hover {
-                background-color: yellow !important;
-                color: red !important;
+                background-color: black !important;
+                color: white !important;
             }
         </style>
     """, unsafe_allow_html=True)
