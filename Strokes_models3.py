@@ -11,13 +11,17 @@ import joblib
 #model_url = "https://github.com/ezekielmose/Stroke_model/blob/main/strock_model_new.sav"
 
 
-url = 'https://github.com/ezekielmose/Stroke_model/blob/main/strock_model_new.sav'
-
-# Download the file
-loaded_model = requests.get(url)
+model_url = 'https://raw.githubusercontent.com/ezekielmose/f_stroke_model/refs/heads/main/strock_model_new2.pkl'
 
 
-model = pickle.load(open("C:/Users/Alvine/Desktop/Stroke Model/strock_model_new2.pkl",'rb'))
+# Fetch the model file from GitHub
+response = requests.get(model_url)
+response.raise_for_status()  # Ensure we notice bad responses (404, etc.)
+
+# Load the model using pickle
+model = pickle.load(io.BytesIO(response.content))
+
+
 def main():
 #input Variables
     
@@ -40,7 +44,7 @@ def main():
 
 
     if st.button('CLICK HERE TO PREDICT'):
-        makeprediction = loaded_model.predict([[gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status]])
+        makeprediction = model.predict([[gender, age, hypertension, heart_disease, ever_married, work_type, Residence_type, avg_glucose_level, bmi, smoking_status]])
         output = round(makeprediction[0])  # Ensure it's an integer (0 or 1)
     
         if output == 0:
