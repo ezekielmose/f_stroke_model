@@ -28,12 +28,12 @@ def main():
     
     st.title ("Stroke Prediction Model")
  
-    gender = str(st.selectbox(label = "What is the Gender (0 - Female and 1 - Male)", options = ["Male", "Female"]))
+    gender = int(st.selectbox(label = "What is the Gender (0 - Female and 1 - Male)", options = [1, 0]))
     age = float(st.text_input("Enter the age", "0"))
     hypertension = int(st.text_input("Hypertension 0 for -ve and 1 for +ve", "0"))
     heart_disease = int(st.text_input("Heart disease 0 for has and 1 for not", "0"))
     ever_married = int(st.text_input("Ever married 0 for No and 1 for Yes", "0"))
-    work_type = int(st.text_input("Work type 0 for private and 1 for self-employed, 2 for children, 3 for gov job, and 4 for never worked", "0"))
+    work_type = selectbox(st.text_input( label = "Work type 0-private. 1-self-employed, 2-children, 3-gov_job, and 4-never worked", options = [0, 1,2,3,4]))
     Residence_type = int(st.text_input("Residence type 0 for urban and 1 for rural", "0"))
     avg_glucose_level = float(st.text_input("Enter any value of avg_glucose_level as per the measurements", "0"))
     bmi = float(st.text_input("Enter any value of BMI as per the measurements", "0"))
