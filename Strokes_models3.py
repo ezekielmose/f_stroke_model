@@ -62,7 +62,14 @@ def main():
     Residence_type = int(st.text_input("Residence type 0 for urban and 1 for rural", "0"))
     avg_glucose_level = float(st.text_input("Enter any value of avg_glucose_level as per the measurements", "0"))
     bmi = float(st.text_input("Enter any value of BMI as per the measurements", "0"))
-    smoking_status = int(st.text_input("Smoking status 0 for never smoked, 1 for unknown, 2 for formerly smoked, 3 for smokes", "0"))
+
+    smoking_status = st.number_input( "Smoking status (0: Never smoked, 1: Unknown, 2: Formerly smoked, 3: Smokes)", 
+        min_value=0, 
+        max_value=3, 
+        step=1
+    )
+    
+    #smoking_status = int(st.text_input("Smoking status 0 for never smoked, 1 for unknown, 2 for formerly smoked, 3 for smokes", "0"))
     
     
 #prediction code
