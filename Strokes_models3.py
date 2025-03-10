@@ -54,7 +54,14 @@ def main():
     """, unsafe_allow_html=True)
      
     gender = int(st.selectbox(label = "What is the Gender (0 - Female and 1 - Male)", options = [1, 0]))
-    age = float(st.text_input("Enter the age", "0"))
+
+    age = st.number_input( "Select the Age using the + and - signs )", 
+        min_value=1, 
+        max_value=80, 
+        step=1
+                                       )
+
+    #age = float(st.text_input("Enter the age", "0"))
     hypertension = int(st.text_input("Hypertension 0 for -ve and 1 for +ve", "0"))
     heart_disease = int(st.text_input("Heart disease 0 for has and 1 for not", "0"))
     ever_married = int(st.text_input("Ever married 0 for No and 1 for Yes", "0"))
