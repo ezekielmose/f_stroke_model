@@ -29,11 +29,32 @@ def main():
     st.title ("Stroke Prediction Model")
 
     # Apply custom CSS
+    # Apply custom CSS to style the dropdown field and menu
     st.markdown("""
         <style>
+            /* Style the dropdown field (where the selected value appears) */
             div[data-baseweb="select"] > div {
-                background-color: lightblue !important;
+                background-color: #ffcccb !important; /* Light Red */
                 color: black !important;
+                border-radius: 5px;
+                padding: 5px;
+            }
+            
+            /* Style the dropdown menu */
+            ul {
+                background-color: lightblue !important;
+            }
+    
+            /* Style dropdown options */
+            li {
+                color: black !important;
+                font-weight: bold;
+            }
+    
+            /* Change the hover effect on dropdown options */
+            li:hover {
+                background-color: yellow !important;
+                color: red !important;
             }
         </style>
     """, unsafe_allow_html=True)
