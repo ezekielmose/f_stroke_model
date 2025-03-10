@@ -36,7 +36,7 @@ def main():
             
             /* Style the dropdown menu */
             ul {
-                background-color: black !important;
+                background-color: smoky black !important;
             }
     
             /* Style dropdown options */
