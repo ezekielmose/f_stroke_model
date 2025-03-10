@@ -36,7 +36,7 @@ def main():
             
             /* Style the dropdown menu */
             ul {
-                background-color: lightblue !important;
+                background-color: lightgrey !important;
             }
     
             /* Style dropdown options */
