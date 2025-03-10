@@ -68,7 +68,13 @@ def main():
                                        )
     
     #avg_glucose_level = float(st.text_input("Enter any value of avg_glucose_level as per the measurements", "0"))
-    bmi = float(st.text_input("Enter any value of BMI as per the measurements", "0"))
+
+    bmi = st.number_input( "Select the BMI value", 
+        min_value=10, 
+        max_value=97, 
+        step=0.2
+    )
+    #bmi = float(st.text_input("Enter any value of BMI as per the measurements", "0"))
 
     smoking_status = st.number_input( "Smoking status (0: Never smoked, 1: Unknown, 2: Formerly smoked, 3: Smokes)", 
         min_value=0, 
