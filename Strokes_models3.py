@@ -32,13 +32,7 @@ def main():
     # Apply custom CSS to style the dropdown field and menu
     st.markdown("""
         <style>
-            /* Style the dropdown field (where the selected value appears) */
-            div[data-baseweb="select"] > div {
-                background-color: #ffcccb !important; /* Light Red */
-                color: black !important;
-                border-radius: 5px;
-                padding: 5px;
-            }
+         
             
             /* Style the dropdown menu */
             ul {
