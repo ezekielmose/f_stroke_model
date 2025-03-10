@@ -27,7 +27,17 @@ def main():
 #input Variables
     
     st.title ("Stroke Prediction Model")
- 
+
+    # Apply custom CSS
+    st.markdown("""
+        <style>
+            div[data-baseweb="select"] > div {
+                background-color: lightblue !important;
+                color: black !important;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+     
     gender = int(st.selectbox(label = "What is the Gender (0 - Female and 1 - Male)", options = [1, 0]))
     age = float(st.text_input("Enter the age", "0"))
     hypertension = int(st.text_input("Hypertension 0 for -ve and 1 for +ve", "0"))
