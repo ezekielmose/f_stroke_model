@@ -36,12 +36,12 @@ def main():
             
             /* Style the dropdown menu */
             ul {
-                background-color: lightgrey !important;
+                background-color: black !important;
             }
     
             /* Style dropdown options */
             li {
-                color: black !important;
+                color: white !important;
                 font-weight: bold;
             }
     
