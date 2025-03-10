@@ -65,6 +65,7 @@ def main():
         min_value=100, 
         max_value=300, 
         step=1
+                                       )
     
     #avg_glucose_level = float(st.text_input("Enter any value of avg_glucose_level as per the measurements", "0"))
     bmi = float(st.text_input("Enter any value of BMI as per the measurements", "0"))
