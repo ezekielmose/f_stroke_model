@@ -28,7 +28,7 @@ def main():
     
     st.title ("Stroke Prediction Model")
  
-    gender = int(st.text_input("What is the Gender (0 - Female and 1 - Male)", "0"))
+    gender = int(st.selectbox(label = "What is the Gender (0 - Female and 1 - Male)", options = ["Male", "Female"]))
     age = float(st.text_input("Enter the age", "0"))
     hypertension = int(st.text_input("Hypertension 0 for -ve and 1 for +ve", "0"))
     heart_disease = int(st.text_input("Heart disease 0 for has and 1 for not", "0"))
